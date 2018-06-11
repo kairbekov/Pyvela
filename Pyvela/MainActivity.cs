@@ -15,9 +15,9 @@ namespace Pyvela
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-
+            gdhm
             // Get our button from the layout resource,
-            // and attach an event to it
+            // and attach an event to itghjk
             Button button = FindViewById<Button>(Resource.Id.myButton);
 
             button.Click += delegate { button.Text = $"{count++} clicks!"; };
