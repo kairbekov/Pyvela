@@ -21,6 +21,7 @@ namespace Pyvela
             Button button = FindViewById<Button>(Resource.Id.myButton);
 
             button.Click += delegate { button.Text = $"{count++} clicks!"; };
+            // Hello world!
         }
     }
 }
