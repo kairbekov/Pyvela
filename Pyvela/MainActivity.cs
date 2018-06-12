@@ -22,6 +22,8 @@ namespace Pyvela
 
             button.Click += delegate { button.Text = $"{count++} clicks!"; };
             // Hello world!
+
+            // LOL KEK CHEBUREK
         }
     }
 }
