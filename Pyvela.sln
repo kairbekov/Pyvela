@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27703.2018
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pyvela", "Pyvela\Pyvela.csproj", "{477F30FD-FA8E-42BA-A27D-BC7ADF4852A3}"
 EndProject
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2834EC20-A270-45EF-950B-CB510B83D0C7}
+		SolutionGuid = {724293A5-505C-46B2-A52D-41C8FAB26624}
 	EndGlobalSection
 EndGlobal

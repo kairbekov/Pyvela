@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:gridSpec="1|8|#0093eeff|K:#ee8700ff:16,l:72,l:16,r|S:#83ee00ff:16,0,l:16,56,l:16,0,r">
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="86.0dp"
+      android:id="@+id/imageView1"
+      android:src="@drawable/codmw2"
+      android:layout_marginBottom="23.0dp"
+      android:layout_marginTop="93.5dp" />
+  <EditText
+      android:hint="Login"
+      android:layout_marginLeft="50dp"
+      android:layout_marginRight="50dp"
+      android:inputType="textMultiLine"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/editText1"
+      android:layout_marginBottom="11.5dp"
+      android:textColor="@android:color/black"
+      android:textColorHint="@android:color/black"
+      android:background="@drawable/back" />
+  <EditText
+      android:layout_marginLeft="50dp"
+      android:layout_marginRight="50dp"
+      android:inputType="textPassword"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/editText2"
+      android:hint="Password"
+      android:textColorHint="@android:color/black"
+      android:background="@drawable/back" />
+  <LinearLayout
+      android:layout_marginLeft="50dp"
+      android:layout_marginRight="50dp"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="36.5dp"
+      android:id="@+id/linearLayout1"
+      android:layout_marginTop="11.5dp">
+    <Button
+        android:layout_weight="1"
+        android:text="Sign Up"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/button1" />
+    <Button
+        android:layout_weight="1"
+        android:layout_width="59.0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/button2"
+        android:text="Sign In" />
+  </LinearLayout>
+
+</LinearLayout>
