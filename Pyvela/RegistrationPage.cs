@@ -60,12 +60,12 @@ namespace Pyvela
                 };
 
 
-               /* button1.Click += (sender1, e) =>
+                button1.Click += (sender1, e) =>
                 {
                     var intent = new Intent(this, typeof(AuthorizationActivity));
 
                     StartActivity(intent);
-                };*/
+                };
 
             }
 

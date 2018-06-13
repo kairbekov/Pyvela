@@ -36,19 +36,19 @@ namespace Pyvela
                 {
                     Toast.MakeText(this, "Error", ToastLength.Short).Show();
                 }
-                /*else
+                else
                 {
                     var intent = new Intent(this, typeof(RegistrationPage));
-                    StartActivity(intent); Переход на RegistrationPage
-                }*/
+                    StartActivity(intent);
+                }
 
 
             };
 
             SignInBut.Click += (s, e) =>
             {
-                /*var intent = new Intent(this, typeof(Subject));
-                StartActivity(intent); Переход на Subject*/ 
+                var intent = new Intent(this, typeof(Subject));
+                StartActivity(intent);
 
             };
 
