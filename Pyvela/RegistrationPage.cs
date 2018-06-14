@@ -12,7 +12,7 @@ using Android.Widget;
 
 
 namespace Pyvela
-{ [Activity(Label = "Pyvela", MainLauncher = true, Icon = "@mipmap/icon")]
+{ [Activity(Label = "Pyvela",  Icon = "@mipmap/icon")]
     class RegistrationPage : Activity
     {
             protected override void OnCreate(Bundle bundle)

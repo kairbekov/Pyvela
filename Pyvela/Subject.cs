@@ -11,7 +11,7 @@ using Android.Views;
 using Android.Widget;
 
 namespace Pyvela
-{ [Activity(Label = "Pyvela")]
+{ [Activity(Label = "Pyvela" , Theme = "@android:style/Theme.Material.Light")]
     class Subject : Activity
     {
        
@@ -39,11 +39,11 @@ namespace Pyvela
 
             void Lv_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
             {
-                new Android.Support.V7.App.AlertDialog.Builder(this).SetNegativeButton("No", (sender1, args) =>
+                new AlertDialog.Builder(this).SetNegativeButton("Yes", (sender1, args) =>
                 {
 
                 })
-                     .SetPositiveButton("Yes", (sender1, args) =>
+                     .SetPositiveButton("No", (sender1, args) =>
                      {
 
                      })
