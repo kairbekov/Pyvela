@@ -16,14 +16,16 @@ namespace Pyvela
     class RegistrationPage : Activity
     {
             protected override void OnCreate(Bundle bundle)
-            {
-                base.OnCreate(bundle);
+        {
+            RequestWindowFeature(WindowFeatures.NoTitle);
+            base.OnCreate(bundle);
 
                 SetContentView(Resource.Layout.RegistrationPage);
 
                 EditText login = (EditText)FindViewById(Resource.Id.login);
-                EditText password = (EditText)FindViewById(Resource.Id.password);
-                EditText name = (EditText)FindViewById(Resource.Id.name);
+                EditText password1 = (EditText)FindViewById(Resource.Id.password1);
+            EditText password2 = (EditText)FindViewById(Resource.Id.password2);
+            EditText name = (EditText)FindViewById(Resource.Id.name);
                 EditText surnames = (EditText)FindViewById(Resource.Id.surnames);
                 EditText phone = (EditText)FindViewById(Resource.Id.phone);
                 EditText email = (EditText)FindViewById(Resource.Id.email);
@@ -32,18 +34,25 @@ namespace Pyvela
                 Button button1 = FindViewById<Button>(Resource.Id.button1);
 
                 button2.Click += (sender, e) =>
-                {if (login.Text.Length == 0 || password.Text.Length == 0 || name.Text.Length == 0 || surnames.Text.Length == 0
+                {if (login.Text.Length == 0 || password1.Text.Length == 0 || name.Text.Length == 0 || surnames.Text.Length == 0
                        || phone.Text.Length == 0 || email.Text.Length == 0)
                     {
                         Toast toast = Toast.MakeText(ApplicationContext,
              "Заполните все поля", ToastLength.Short);
                         toast.Show();
                     }
-                    else if (password.Text.Length < 8)
+                    else if (password1.Text.Length < 8)
                     {
                         Toast toast = Toast.MakeText(ApplicationContext,
               "Длина пароля 8 ", ToastLength.Short);
                         toast.Show();
+                    }
+                else if (password1.Text != password2.Text)
+                    {
+                        Toast toast = Toast.MakeText(ApplicationContext,
+      "Пароли не совпадают ", ToastLength.Short);
+                        toast.Show();
+
                     }
                     else if (phone.Text.Length != 11)
                     {

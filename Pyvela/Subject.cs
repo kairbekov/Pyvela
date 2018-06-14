@@ -20,8 +20,9 @@ namespace Pyvela
             private JavaList<Spacecraft> spacecrafts;
 
             protected override void OnCreate(Bundle bundle)
-            {
-                base.OnCreate(bundle);
+        {
+            RequestWindowFeature(WindowFeatures.NoTitle);
+            base.OnCreate(bundle);
 
                 SetContentView(Resource.Layout.ListViewc);
 

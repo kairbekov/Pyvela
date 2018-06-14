@@ -1999,8 +1999,8 @@ namespace Pyvela
 			// aapt resource value: 0x7f0b0059
 			public const int edit_query = 2131427417;
 			
-			// aapt resource value: 0x7f0b0089
-			public const int email = 2131427465;
+			// aapt resource value: 0x7f0b008a
+			public const int email = 2131427466;
 			
 			// aapt resource value: 0x7f0b0022
 			public const int end = 2131427362;
@@ -2065,8 +2065,8 @@ namespace Pyvela
 			// aapt resource value: 0x7f0b0076
 			public const int media_actions = 2131427446;
 			
-			// aapt resource value: 0x7f0b008a
-			public const int message = 2131427466;
+			// aapt resource value: 0x7f0b008b
+			public const int message = 2131427467;
 			
 			// aapt resource value: 0x7f0b0023
 			public const int middle = 2131427363;
@@ -2077,8 +2077,8 @@ namespace Pyvela
 			// aapt resource value: 0x7f0b006f
 			public const int myButton = 2131427439;
 			
-			// aapt resource value: 0x7f0b0086
-			public const int name = 2131427462;
+			// aapt resource value: 0x7f0b0087
+			public const int name = 2131427463;
 			
 			// aapt resource value: 0x7f0b006d
 			public const int nameTxt = 2131427437;
@@ -2105,10 +2105,13 @@ namespace Pyvela
 			public const int parentPanel = 2131427392;
 			
 			// aapt resource value: 0x7f0b0085
-			public const int password = 2131427461;
+			public const int password1 = 2131427461;
 			
-			// aapt resource value: 0x7f0b0088
-			public const int phone = 2131427464;
+			// aapt resource value: 0x7f0b0086
+			public const int password2 = 2131427462;
+			
+			// aapt resource value: 0x7f0b0089
+			public const int phone = 2131427465;
 			
 			// aapt resource value: 0x7f0b0005
 			public const int progress_circular = 2131427333;
@@ -2212,8 +2215,8 @@ namespace Pyvela
 			// aapt resource value: 0x7f0b0062
 			public const int submit_area = 2131427426;
 			
-			// aapt resource value: 0x7f0b0087
-			public const int surnames = 2131427463;
+			// aapt resource value: 0x7f0b0088
+			public const int surnames = 2131427464;
 			
 			// aapt resource value: 0x7f0b0011
 			public const int tabMode = 2131427345;
