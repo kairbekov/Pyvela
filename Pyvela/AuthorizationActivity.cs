@@ -49,7 +49,7 @@ namespace Pyvela
                     StartActivity(intent);
                 }
                 */
-                var intent = new Intent(this, typeof(SubjectsActivity));
+                var intent = new Intent(this, typeof(MainActivity));
                 StartActivity(intent);
             };
         }

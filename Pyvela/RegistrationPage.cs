@@ -62,7 +62,7 @@ namespace Pyvela
                     }
                     else
                    {
-                        var intent = new Intent(this, typeof(SubjectsActivity));
+                        var intent = new Intent(this, typeof(MainActivity));
 
                         this.StartActivity(intent);
                     }
