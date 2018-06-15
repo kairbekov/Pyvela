@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+  <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_main_page"
+        android:title="Main" />
+    <item
+        android:id="@+id/nav_payment"
+        android:title="Payment" />
+    <item
+        android:id="@+id/nav_speciality"
+        android:title="Speciality" />
+    <item
+        android:id="@+id/nav_UNT"
+        android:title="UNT" />
+    <item
+        android:id="@+id/nav_one_subject"
+        android:title="Single subject"/>
+    <item
+        android:id="@+id/nav_results"
+        android:title="Results"/>
+    <item
+      android:id="@+id/nav_exit"
+      android:title="Exit" />
+    <item
+      android:id="@+id/nav_settings"
+      android:title="Settings"/>
+  </group>
+</menu>

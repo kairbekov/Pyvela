@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5sp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minHeight="40sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dbdbdb"
+        android:layout_margin="5sp">
+        <TextView
+            android:id="@+id/ResultPageNumber"
+            android:text="№"
+            android:textSize="23sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/ResultPageOperator"
+            android:text="Test"
+            android:textSize="23sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/ResultPageDate"
+            android:text="Date"
+            android:textSize="23sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/ResultPageAmount"
+            android:text="Points"
+            android:textSize="23sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/ResultPageListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5sp" />
+</LinearLayout>

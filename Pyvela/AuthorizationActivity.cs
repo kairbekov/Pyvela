@@ -32,19 +32,14 @@ namespace Pyvela
 
             SignUpBut.Click += (s, e) =>
             {
-                
                 var intent = new Intent(this, typeof(RegistrationPage));
                 StartActivity(intent);
-                
-
-
             };
 
             SignInBut.Click += (s, e) =>
             {
-
-                
-                /*if (LoginText.Text.Length == 0 || PasswordText.Text.Length == 0)
+                /*
+                if (LoginText.Text.Length == 0 || PasswordText.Text.Length == 0)
                 {
                     Toast.MakeText(this, "Error", ToastLength.Short).Show();
                 }
@@ -52,13 +47,11 @@ namespace Pyvela
                 {
                     var intent = new Intent(this, typeof(Subject));
                     StartActivity(intent);
-                }*/
-                var intent = new Intent(this, typeof(Subject));
+                }
+                */
+                var intent = new Intent(this, typeof(SubjectsActivity));
                 StartActivity(intent);
             };
-
-
-            
         }
     }
 }
