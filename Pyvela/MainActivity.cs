@@ -16,11 +16,10 @@ namespace Pyvela
     [Activity(Label = "Pyvela", Theme = "@style/AppTheme.NoActionBar", Icon = "@mipmap/icon")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
-        Button button;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.main_activity);
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
@@ -31,17 +30,6 @@ namespace Pyvela
 
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
-
-            List<Containers.ImageTitle> Subjects = new List<Containers.ImageTitle>
-            {
-                new Containers.ImageTitle("Mathematics", Resource.Drawable.d),
-                new Containers.ImageTitle("Physics", Resource.Drawable.a),
-                new Containers.ImageTitle("Geography", Resource.Drawable.aaa)
-            };
-
-            ListView listView = FindViewById<ListView>(Resource.Id.SubjectPageListView);
-            listView.Adapter = new Adapters.ImageTitleAdapter(this, Resource.Layout.ImageTitleMarkup, Subjects);
-
         }
 
         public override void OnBackPressed()
@@ -76,6 +64,8 @@ namespace Pyvela
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
+            var fragmentTransacion = SupportFragmentManager.BeginTransaction();
+
             int id = item.ItemId;
 
             if (id == Resource.Id.nav_main_page)
@@ -100,7 +90,7 @@ namespace Pyvela
             }
             else if (id == Resource.Id.nav_results)
             {
-
+                fragmentTransacion.Add(Resource.Id.content_main_fragments_placeholder, new NavDraw.Results.ResultsFragment());
             }
             else if (id == Resource.Id.nav_exit)
             {
@@ -110,7 +100,7 @@ namespace Pyvela
             {
 
             }
-
+            fragmentTransacion.Commit();
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             drawer.CloseDrawer(GravityCompat.Start);
             return true;

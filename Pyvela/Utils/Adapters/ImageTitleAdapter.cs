@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace Pyvela.Adapters
+namespace Pyvela.Utils.Adapters
 {
     class ImageTitleAdapter : ArrayAdapter
     {

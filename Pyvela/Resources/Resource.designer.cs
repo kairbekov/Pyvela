@@ -1187,44 +1187,44 @@ namespace Pyvela
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0c004a
-			public const int abc_background_cache_hint_selector_material_dark = 2131492938;
-			
-			// aapt resource value: 0x7f0c004b
-			public const int abc_background_cache_hint_selector_material_light = 2131492939;
-			
-			// aapt resource value: 0x7f0c004c
-			public const int abc_btn_colored_borderless_text_material = 2131492940;
-			
-			// aapt resource value: 0x7f0c004d
-			public const int abc_btn_colored_text_material = 2131492941;
-			
 			// aapt resource value: 0x7f0c004e
-			public const int abc_color_highlight_material = 2131492942;
+			public const int abc_background_cache_hint_selector_material_dark = 2131492942;
 			
 			// aapt resource value: 0x7f0c004f
-			public const int abc_hint_foreground_material_dark = 2131492943;
+			public const int abc_background_cache_hint_selector_material_light = 2131492943;
 			
 			// aapt resource value: 0x7f0c0050
-			public const int abc_hint_foreground_material_light = 2131492944;
+			public const int abc_btn_colored_borderless_text_material = 2131492944;
+			
+			// aapt resource value: 0x7f0c0051
+			public const int abc_btn_colored_text_material = 2131492945;
+			
+			// aapt resource value: 0x7f0c0052
+			public const int abc_color_highlight_material = 2131492946;
+			
+			// aapt resource value: 0x7f0c0053
+			public const int abc_hint_foreground_material_dark = 2131492947;
+			
+			// aapt resource value: 0x7f0c0054
+			public const int abc_hint_foreground_material_light = 2131492948;
 			
 			// aapt resource value: 0x7f0c0000
 			public const int abc_input_method_navigation_guard = 2131492864;
 			
-			// aapt resource value: 0x7f0c0051
-			public const int abc_primary_text_disable_only_material_dark = 2131492945;
-			
-			// aapt resource value: 0x7f0c0052
-			public const int abc_primary_text_disable_only_material_light = 2131492946;
-			
-			// aapt resource value: 0x7f0c0053
-			public const int abc_primary_text_material_dark = 2131492947;
-			
-			// aapt resource value: 0x7f0c0054
-			public const int abc_primary_text_material_light = 2131492948;
-			
 			// aapt resource value: 0x7f0c0055
-			public const int abc_search_url_text = 2131492949;
+			public const int abc_primary_text_disable_only_material_dark = 2131492949;
+			
+			// aapt resource value: 0x7f0c0056
+			public const int abc_primary_text_disable_only_material_light = 2131492950;
+			
+			// aapt resource value: 0x7f0c0057
+			public const int abc_primary_text_material_dark = 2131492951;
+			
+			// aapt resource value: 0x7f0c0058
+			public const int abc_primary_text_material_light = 2131492952;
+			
+			// aapt resource value: 0x7f0c0059
+			public const int abc_search_url_text = 2131492953;
 			
 			// aapt resource value: 0x7f0c0001
 			public const int abc_search_url_text_normal = 2131492865;
@@ -1235,29 +1235,29 @@ namespace Pyvela
 			// aapt resource value: 0x7f0c0003
 			public const int abc_search_url_text_selected = 2131492867;
 			
-			// aapt resource value: 0x7f0c0056
-			public const int abc_secondary_text_material_dark = 2131492950;
-			
-			// aapt resource value: 0x7f0c0057
-			public const int abc_secondary_text_material_light = 2131492951;
-			
-			// aapt resource value: 0x7f0c0058
-			public const int abc_tint_btn_checkable = 2131492952;
-			
-			// aapt resource value: 0x7f0c0059
-			public const int abc_tint_default = 2131492953;
-			
 			// aapt resource value: 0x7f0c005a
-			public const int abc_tint_edittext = 2131492954;
+			public const int abc_secondary_text_material_dark = 2131492954;
 			
 			// aapt resource value: 0x7f0c005b
-			public const int abc_tint_seek_thumb = 2131492955;
+			public const int abc_secondary_text_material_light = 2131492955;
 			
 			// aapt resource value: 0x7f0c005c
-			public const int abc_tint_spinner = 2131492956;
+			public const int abc_tint_btn_checkable = 2131492956;
 			
 			// aapt resource value: 0x7f0c005d
-			public const int abc_tint_switch_track = 2131492957;
+			public const int abc_tint_default = 2131492957;
+			
+			// aapt resource value: 0x7f0c005e
+			public const int abc_tint_edittext = 2131492958;
+			
+			// aapt resource value: 0x7f0c005f
+			public const int abc_tint_seek_thumb = 2131492959;
+			
+			// aapt resource value: 0x7f0c0060
+			public const int abc_tint_spinner = 2131492960;
+			
+			// aapt resource value: 0x7f0c0061
+			public const int abc_tint_switch_track = 2131492961;
 			
 			// aapt resource value: 0x7f0c0004
 			public const int accent_material_dark = 2131492868;
@@ -1276,6 +1276,9 @@ namespace Pyvela
 			
 			// aapt resource value: 0x7f0c0009
 			public const int background_material_light = 2131492873;
+			
+			// aapt resource value: 0x7f0c004d
+			public const int black = 2131492941;
 			
 			// aapt resource value: 0x7f0c000a
 			public const int bright_foreground_disabled_material_dark = 2131492874;
@@ -1313,8 +1316,8 @@ namespace Pyvela
 			// aapt resource value: 0x7f0c003c
 			public const int design_bottom_navigation_shadow_color = 2131492924;
 			
-			// aapt resource value: 0x7f0c005e
-			public const int design_error = 2131492958;
+			// aapt resource value: 0x7f0c0062
+			public const int design_error = 2131492962;
 			
 			// aapt resource value: 0x7f0c003d
 			public const int design_fab_shadow_end_color = 2131492925;
@@ -1340,8 +1343,8 @@ namespace Pyvela
 			// aapt resource value: 0x7f0c0044
 			public const int design_snackbar_background_color = 2131492932;
 			
-			// aapt resource value: 0x7f0c005f
-			public const int design_tint_password_toggle = 2131492959;
+			// aapt resource value: 0x7f0c0063
+			public const int design_tint_password_toggle = 2131492963;
 			
 			// aapt resource value: 0x7f0c0012
 			public const int dim_foreground_disabled_material_dark = 2131492882;
@@ -1363,6 +1366,9 @@ namespace Pyvela
 			
 			// aapt resource value: 0x7f0c0018
 			public const int foreground_material_light = 2131492888;
+			
+			// aapt resource value: 0x7f0c004c
+			public const int gray = 2131492940;
 			
 			// aapt resource value: 0x7f0c0019
 			public const int highlighted_text_material_dark = 2131492889;
@@ -1457,17 +1463,20 @@ namespace Pyvela
 			// aapt resource value: 0x7f0c0034
 			public const int secondary_text_disabled_material_light = 2131492916;
 			
+			// aapt resource value: 0x7f0c004b
+			public const int silver = 2131492939;
+			
 			// aapt resource value: 0x7f0c0035
 			public const int switch_thumb_disabled_material_dark = 2131492917;
 			
 			// aapt resource value: 0x7f0c0036
 			public const int switch_thumb_disabled_material_light = 2131492918;
 			
-			// aapt resource value: 0x7f0c0060
-			public const int switch_thumb_material_dark = 2131492960;
+			// aapt resource value: 0x7f0c0064
+			public const int switch_thumb_material_dark = 2131492964;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int switch_thumb_material_light = 2131492961;
+			// aapt resource value: 0x7f0c0065
+			public const int switch_thumb_material_light = 2131492965;
 			
 			// aapt resource value: 0x7f0c0037
 			public const int switch_thumb_normal_material_dark = 2131492919;
@@ -1480,6 +1489,9 @@ namespace Pyvela
 			
 			// aapt resource value: 0x7f0c003a
 			public const int tooltip_background_light = 2131492922;
+			
+			// aapt resource value: 0x7f0c004a
+			public const int white = 2131492938;
 			
 			static Color()
 			{
@@ -1716,11 +1728,11 @@ namespace Pyvela
 			// aapt resource value: 0x7f07000a
 			public const int abc_text_size_title_material_toolbar = 2131165194;
 			
-			// aapt resource value: 0x7f07009b
-			public const int activity_horizontal_margin = 2131165339;
+			// aapt resource value: 0x7f07009f
+			public const int activity_horizontal_margin = 2131165343;
 			
-			// aapt resource value: 0x7f07009c
-			public const int activity_vertical_margin = 2131165340;
+			// aapt resource value: 0x7f0700a0
+			public const int activity_vertical_margin = 2131165344;
 			
 			// aapt resource value: 0x7f07008b
 			public const int compat_button_inset_horizontal_material = 2131165323;
@@ -1857,8 +1869,8 @@ namespace Pyvela
 			// aapt resource value: 0x7f070051
 			public const int disabled_alpha_material_light = 2131165265;
 			
-			// aapt resource value: 0x7f07009f
-			public const int fab_margin = 2131165343;
+			// aapt resource value: 0x7f07009e
+			public const int fab_margin = 2131165342;
 			
 			// aapt resource value: 0x7f070000
 			public const int fastscroll_default_thickness = 2131165184;
@@ -1899,11 +1911,17 @@ namespace Pyvela
 			// aapt resource value: 0x7f070005
 			public const int item_touch_helper_swipe_escape_velocity = 2131165189;
 			
-			// aapt resource value: 0x7f07009e
-			public const int nav_header_height = 2131165342;
+			// aapt resource value: 0x7f0700a1
+			public const int list_header_padding = 2131165345;
 			
-			// aapt resource value: 0x7f07009d
-			public const int nav_header_vertical_spacing = 2131165341;
+			// aapt resource value: 0x7f0700a2
+			public const int list_item_padding = 2131165346;
+			
+			// aapt resource value: 0x7f0700a4
+			public const int nav_header_height = 2131165348;
+			
+			// aapt resource value: 0x7f0700a3
+			public const int nav_header_vertical_spacing = 2131165347;
 			
 			// aapt resource value: 0x7f070090
 			public const int notification_action_icon_size = 2131165328;
@@ -1949,6 +1967,15 @@ namespace Pyvela
 			
 			// aapt resource value: 0x7f07009a
 			public const int notification_top_pad_large_text = 2131165338;
+			
+			// aapt resource value: 0x7f07009d
+			public const int text_size_heading = 2131165341;
+			
+			// aapt resource value: 0x7f07009b
+			public const int text_size_main = 2131165339;
+			
+			// aapt resource value: 0x7f07009c
+			public const int text_size_sub_heading = 2131165340;
 			
 			// aapt resource value: 0x7f070059
 			public const int tooltip_corner_radius = 2131165273;
@@ -2405,21 +2432,6 @@ namespace Pyvela
 			// aapt resource value: 0x7f080035
 			public const int META = 2131230773;
 			
-			// aapt resource value: 0x7f0800c6
-			public const int ResultPageAmount = 2131230918;
-			
-			// aapt resource value: 0x7f0800c5
-			public const int ResultPageDate = 2131230917;
-			
-			// aapt resource value: 0x7f0800c7
-			public const int ResultPageListView = 2131230919;
-			
-			// aapt resource value: 0x7f0800c3
-			public const int ResultPageNumber = 2131230915;
-			
-			// aapt resource value: 0x7f0800c4
-			public const int ResultPageOperator = 2131230916;
-			
 			// aapt resource value: 0x7f080036
 			public const int SHIFT = 2131230774;
 			
@@ -2531,9 +2543,6 @@ namespace Pyvela
 			// aapt resource value: 0x7f08003d
 			public const int bottom = 2131230781;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int but1 = 2131230884;
-			
 			// aapt resource value: 0x7f080090
 			public const int button1 = 2131230864;
 			
@@ -2575,6 +2584,9 @@ namespace Pyvela
 			
 			// aapt resource value: 0x7f080066
 			public const int contentPanel = 2131230822;
+			
+			// aapt resource value: 0x7f0800a4
+			public const int content_main_fragments_placeholder = 2131230884;
 			
 			// aapt resource value: 0x7f080095
 			public const int coordinator = 2131230869;
@@ -2821,6 +2833,21 @@ namespace Pyvela
 			
 			// aapt resource value: 0x7f0800bb
 			public const int relativeLayout1 = 2131230907;
+			
+			// aapt resource value: 0x7f0800c5
+			public const int results_frag_date = 2131230917;
+			
+			// aapt resource value: 0x7f0800c7
+			public const int results_frag_listView = 2131230919;
+			
+			// aapt resource value: 0x7f0800c3
+			public const int results_frag_number = 2131230915;
+			
+			// aapt resource value: 0x7f0800c4
+			public const int results_frag_operator = 2131230916;
+			
+			// aapt resource value: 0x7f0800c6
+			public const int results_frag_points = 2131230918;
 			
 			// aapt resource value: 0x7f08004a
 			public const int right = 2131230794;
@@ -3176,7 +3203,7 @@ namespace Pyvela
 			public const int app_bar_main = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int AuthorizationLayout = 2130968603;
+			public const int auth_act = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
 			public const int design_bottom_navigation_item = 2130968604;
@@ -3221,13 +3248,13 @@ namespace Pyvela
 			public const int design_text_input_password_icon = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int ImageTitleMarkup = 2130968618;
+			public const int image_title_markup = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int Main = 2130968619;
+			public const int main_activity = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int MainContent = 2130968620;
+			public const int main_content = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
 			public const int nav_header_main = 2130968621;
@@ -3278,10 +3305,10 @@ namespace Pyvela
 			public const int notification_template_part_time = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int RegistrationPage = 2130968637;
+			public const int registr_act = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int ResultsPage = 2130968638;
+			public const int results_frag = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
 			public const int select_dialog_item_material = 2130968639;
@@ -3293,19 +3320,16 @@ namespace Pyvela
 			public const int select_dialog_singlechoice_material = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int SubjectsPage = 2130968642;
+			public const int subjects_act = 2130968642;
 			
 			// aapt resource value: 0x7f040043
 			public const int support_simple_spinner_dropdown_item = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int TableRowMarkup = 2130968644;
+			public const int table_markup = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int TestLayout = 2130968645;
-			
-			// aapt resource value: 0x7f040046
-			public const int tooltip = 2130968646;
+			public const int tooltip = 2130968645;
 			
 			static Layout()
 			{

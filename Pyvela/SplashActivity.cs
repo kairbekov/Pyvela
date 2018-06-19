@@ -29,7 +29,6 @@ namespace Pyvela
         {
             base.OnCreate(savedInstanceState, persistentState);
             Log.Debug(TAG, "SplashActivity.OnCreate");
-
         }
 
         public void AppPreferences(Context context)
@@ -55,18 +54,7 @@ namespace Pyvela
             AppPreferences(this);
             SaveAccessKey("Nurlan", false);
 
-            Task startupWork = new Task(() => { SimulateStartup(); });
-            startupWork.Start();
-        }
-
-        // Simulates background work that happens behind the splash screen
-        async void SimulateStartup()
-        {
-
-            Log.Debug(TAG, "Performing some startup work that takes a bit of time.");
-            await Task.Delay(0); // Simulate a bit of startup work.
-            Log.Debug(TAG, "Startup work is finished - starting MainActivity.");
-            if (SharedPrefs.GetBoolean("Bool", false)==false)
+            if (SharedPrefs.GetBoolean("Bool", false) == false)
             {
                 StartActivity(new Intent(Application.Context, typeof(AuthorizationActivity)));
 
@@ -74,6 +62,5 @@ namespace Pyvela
             else
                 StartActivity(new Intent(Application.Context, typeof(MainActivity)));
         }
-
     }
 }

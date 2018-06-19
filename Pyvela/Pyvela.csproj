@@ -94,17 +94,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapters\TableAdapter.cs" />
+    <Compile Include="NavDraw\Results\ResultsFragment.cs" />
+    <Compile Include="Utils\Adapters\TableAdapter.cs" />
     <Compile Include="AuthorizationActivity.cs" />
-    <Compile Include="Containers\TableRow.cs" />
-    <Compile Include="Adapters\ImageTitleAdapter.cs" />
+    <Compile Include="Utils\Adapters\ImageTitleAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="RegistrationPage.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResultActivity.cs" />
-    <Compile Include="Containers\ImageTitle.cs" />
+    <Compile Include="Utils\Containers\ImageTitle.cs" />
     <Compile Include="SplashActivity.cs" />
+    <Compile Include="Utils\Containers\Row.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -127,12 +127,7 @@
     <AndroidResource Include="Resources\drawable\codmw2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\TestLayout.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\AuthorizationLayout.axml">
+    <AndroidResource Include="Resources\layout\auth_act.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -146,13 +141,13 @@
     <AndroidResource Include="Resources\values\style.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\RegistrationPage.axml" />
+    <AndroidResource Include="Resources\layout\registr_act.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\SubjectsPage.axml" />
+    <AndroidResource Include="Resources\layout\subjects_act.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\ImageTitleMarkup.axml" />
+    <AndroidResource Include="Resources\layout\image_title_markup.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\tarih.jpg" />
@@ -191,7 +186,7 @@
     <AndroidResource Include="Resources\drawable\engl.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\MainContent.axml">
+    <AndroidResource Include="Resources\layout\main_content.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -214,20 +209,23 @@
     <AndroidResource Include="Resources\drawable\side_nav_bar.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\TableRowMarkup.xml" />
+    <AndroidResource Include="Resources\layout\table_markup.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\ResultsPage.axml">
+    <AndroidResource Include="Resources\layout\results_frag.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml">
+    <AndroidResource Include="Resources\layout\main_activity.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\colors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NavDraw\Specialities\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />

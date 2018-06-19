@@ -1,4 +1,4 @@
-﻿namespace Pyvela.Containers
+﻿namespace Pyvela.Utils.Containers
 {
     class ImageTitle
     {
@@ -11,5 +11,4 @@
             this.Image = ImageResource;
         }
     }
-
 }

@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Pyvela.Utils.Containers;
 
-using Android.App;
+using System.Collections.Generic;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace Pyvela.Adapters
+namespace Pyvela.Utils.Adapters
 {
     class TableAdapter: ArrayAdapter
     {
         private LayoutInflater Inflater { get; set; }
-        private int Layout { get; set; } //Only TableRowMarkup
-        private List<Pyvela.Containers.TableRow> Rows { get; set; }
+        private int Layout { get; set; } //Only table_markup
+        private List<Row> Rows { get; set; }
 
-        public TableAdapter(Context context, int Resourse, List<Pyvela.Containers.TableRow> Rows) : base(context, Resourse, Rows)
+        public TableAdapter(Context context, int Resourse, List<Row> Rows) : base(context, Resourse, Rows)
         {
             this.Inflater = LayoutInflater.From(context);
             this.Layout = Resourse;
@@ -33,12 +28,12 @@ namespace Pyvela.Adapters
             TextView TableColumn3 = (TextView)view.FindViewById(Resource.Id.TableRowMarkupColumn3);
             TextView TableColumn4 = (TextView)view.FindViewById(Resource.Id.TableRowMarkupColumn4);
 
-            Pyvela.Containers.TableRow Row = this.Rows[Position];
+            Row row = this.Rows[Position];
 
             TableColumn1.Text = (++Position).ToString();
-            TableColumn2.Text = Row.Column2;
-            TableColumn3.Text = Row.Column3;
-            TableColumn4.Text = Row.Column4;
+            TableColumn2.Text = row.Column2;
+            TableColumn3.Text = row.Column3;
+            TableColumn4.Text = row.Column4;
 
             return view;
         }

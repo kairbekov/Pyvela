@@ -22,7 +22,7 @@ namespace Pyvela
         {
             RequestWindowFeature(WindowFeatures.NoTitle);
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.AuthorizationLayout);
+            SetContentView(Resource.Layout.auth_act);
             imageView = FindViewById<ImageView>(Resource.Id.imageView1);
 
             SignUpBut = FindViewById<Button>(Resource.Id.button1);
