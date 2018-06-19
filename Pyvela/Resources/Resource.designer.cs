@@ -2423,12 +2423,6 @@ namespace Pyvela
 			// aapt resource value: 0x7f080034
 			public const int FUNCTION = 2131230772;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int ImageTitleMarkupImage = 2131230880;
-			
-			// aapt resource value: 0x7f0800a1
-			public const int ImageTitleMarkupTitle = 2131230881;
-			
 			// aapt resource value: 0x7f080035
 			public const int META = 2131230773;
 			
@@ -2437,9 +2431,6 @@ namespace Pyvela
 			
 			// aapt resource value: 0x7f080037
 			public const int SYM = 2131230775;
-			
-			// aapt resource value: 0x7f0800c8
-			public const int SubjectPageListView = 2131230920;
 			
 			// aapt resource value: 0x7f0800c9
 			public const int TableRowMarkupColumn1 = 2131230921;
@@ -2698,6 +2689,12 @@ namespace Pyvela
 			
 			// aapt resource value: 0x7f08008c
 			public const int imageView1 = 2131230860;
+			
+			// aapt resource value: 0x7f0800a0
+			public const int img_tl_image = 2131230880;
+			
+			// aapt resource value: 0x7f0800a1
+			public const int img_tl_title = 2131230881;
 			
 			// aapt resource value: 0x7f0800b5
 			public const int info = 2131230901;
@@ -2962,6 +2959,9 @@ namespace Pyvela
 			
 			// aapt resource value: 0x7f0800ad
 			public const int status_bar_latest_event_content = 2131230893;
+			
+			// aapt resource value: 0x7f0800c8
+			public const int subjects_frag_listView = 2131230920;
 			
 			// aapt resource value: 0x7f080076
 			public const int submenuarrow = 2131230838;
@@ -3320,7 +3320,7 @@ namespace Pyvela
 			public const int select_dialog_singlechoice_material = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int subjects_act = 2130968642;
+			public const int subjects_frag = 2130968642;
 			
 			// aapt resource value: 0x7f040043
 			public const int support_simple_spinner_dropdown_item = 2130968643;

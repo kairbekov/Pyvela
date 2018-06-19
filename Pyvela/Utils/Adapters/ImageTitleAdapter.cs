@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Pyvela.Utils.Containers;
 
-using Android.App;
+using System.Collections.Generic;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
@@ -16,9 +11,9 @@ namespace Pyvela.Utils.Adapters
     {
         private LayoutInflater Inflater { get; set; }
         private int Layout { get; set; } //Only ImageTitleMarkup
-        private List<Containers.ImageTitle> Subjects { get; set; }
+        private List<ImageTitle> Subjects { get; set; }
 
-        public ImageTitleAdapter(Context context, int Resourse, List<Containers.ImageTitle> Subjects) : base(context, Resourse, Subjects)
+        public ImageTitleAdapter(Context context, int Resourse, List<ImageTitle> Subjects) : base(context, Resourse, Subjects)
         {
             this.Inflater = LayoutInflater.From(context);
             this.Layout = Resourse;
@@ -28,10 +23,10 @@ namespace Pyvela.Utils.Adapters
         public override View GetView(int Position, View ConvertView, ViewGroup Parent)
         {
             View view = Inflater.Inflate(this.Layout, Parent, false);
-            ImageView Image = (ImageView)view.FindViewById(Resource.Id.ImageTitleMarkupImage);
-            TextView Title = (TextView)view.FindViewById(Resource.Id.ImageTitleMarkupTitle);
+            ImageView Image = (ImageView)view.FindViewById(Resource.Id.img_tl_image);
+            TextView Title = (TextView)view.FindViewById(Resource.Id.img_tl_title);
 
-            Containers.ImageTitle subject = this.Subjects[Position];
+            ImageTitle subject = this.Subjects[Position];
 
             Image.SetImageResource(subject.Image);
             Title.Text = subject.Title;

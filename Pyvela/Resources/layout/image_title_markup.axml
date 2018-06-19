@@ -3,18 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:padding="@dimen/list_item_padding">
     <ImageView
-        android:id="@+id/ImageTitleMarkupImage"
+        android:id="@+id/img_tl_image"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp"
         android:layout_width="50dp"
         android:layout_height="50dp" />
     <TextView
-        android:id="@+id/ImageTitleMarkupTitle"
+        android:id="@+id/img_tl_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="name"
-        android:textSize="25dp"
+        android:textSize="@dimen/text_size_sub_heading"
         android:gravity="left|center" />
 </LinearLayout>

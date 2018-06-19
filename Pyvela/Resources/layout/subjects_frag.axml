@@ -4,15 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="@layout/app_bar_main"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#009688"
-    android:minWidth="25dp"
-    android:minHeight="25dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <ListView
+        android:id="@+id/subjects_frag_listView"
         android:minWidth="25dp"
         android:minHeight="25dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/SubjectPageListView" />
+        android:layout_height="match_parent" />
 </LinearLayout>

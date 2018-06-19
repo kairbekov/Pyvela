@@ -30,6 +30,10 @@ namespace Pyvela
 
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
+
+            var fragmentTransaction = SupportFragmentManager.BeginTransaction();
+            fragmentTransaction.Add(Resource.Id.content_main_fragments_placeholder, new NavDraw.Subjects.SubjectsFragment());
+            fragmentTransaction.Commit();
         }
 
         public override void OnBackPressed()
@@ -90,7 +94,7 @@ namespace Pyvela
             }
             else if (id == Resource.Id.nav_results)
             {
-                fragmentTransacion.Add(Resource.Id.content_main_fragments_placeholder, new NavDraw.Results.ResultsFragment());
+                fragmentTransacion.Replace(Resource.Id.content_main_fragments_placeholder, new NavDraw.Results.ResultsFragment());
             }
             else if (id == Resource.Id.nav_exit)
             {
