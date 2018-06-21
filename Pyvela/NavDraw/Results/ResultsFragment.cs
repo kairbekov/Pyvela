@@ -29,7 +29,6 @@ namespace Pyvela.NavDraw.Results
                                               };
 
             ListView lv = (ListView)root.FindViewById(Resource.Id.results_frag_listView);
-
             lv.Adapter = new TableAdapter(Activity, Resource.Layout.table_markup, rows);
             return root;
         }

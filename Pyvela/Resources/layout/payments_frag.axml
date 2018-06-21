@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/silver_lite"
-        android:padding="@dimen/list_header_padding">
+        android:layout_width="match_parent"
+        android:padding="@dimen/list_header_padding"
+        android:background="@color/silver_lite">
         <TextView
-            android:id="@+id/results_frag_number"
+            android:id="@+id/payments_frag_number"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -20,15 +18,15 @@
             android:text="№"
             android:textSize="@dimen/text_size_sub_heading" />
         <TextView
-            android:id="@+id/results_frag_operator"
+            android:id="@+id/payments_frag_operator"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="Test"
+            android:text="Operator"
             android:textSize="@dimen/text_size_sub_heading" />
         <TextView
-            android:id="@+id/results_frag_date"
+            android:id="@+id/payments_frag_date"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -36,23 +34,16 @@
             android:text="Date"
             android:textSize="@dimen/text_size_sub_heading" />
         <TextView
-            android:id="@+id/results_frag_points"
+            android:id="@+id/payments_frag_amount"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="Points"
+            android:text="Amount"
             android:textSize="@dimen/text_size_sub_heading" />
     </LinearLayout>
-<!--
-    <Button
-        android:id="@+id/results_frag_button_update"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add" />
-        -->
     <ListView
-        android:id="@+id/results_frag_listView"
+        android:id="@+id/paymnets_frag_listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

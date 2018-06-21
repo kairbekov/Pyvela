@@ -1,25 +1,32 @@
-﻿using System;
-using Android;
+﻿using Pyvela.NavDraw;
+using Pyvela.NavDraw.Results;
+using Pyvela.NavDraw.Subjects;
+using Pyvela.NavDraw.Payments;
+
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Widget;
 using Android.Support.Design.Widget;
 using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
-using System.Collections.Generic;
+using Android.Widget;
+using System;
 
 namespace Pyvela
 {
     [Activity(Label = "Pyvela", Theme = "@style/AppTheme.NoActionBar", Icon = "@mipmap/icon")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
+        SubjectsFragment subjectsFragments;
+        ResultsFragment resultsFragment;
+        PaymentsFragment paymentsFragments;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.main_activity);
+
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
@@ -32,8 +39,13 @@ namespace Pyvela
             navigationView.SetNavigationItemSelectedListener(this);
 
             var fragmentTransaction = SupportFragmentManager.BeginTransaction();
-            fragmentTransaction.Add(Resource.Id.content_main_fragments_placeholder, new NavDraw.Subjects.SubjectsFragment());
+            fragmentTransaction.Add(2131230884, new NavDraw.Subjects.SubjectsFragment());
+            fragmentTransaction.SetTransition(4097);
             fragmentTransaction.Commit();
+
+            subjectsFragments = new SubjectsFragment();
+            resultsFragment = new ResultsFragment();
+            paymentsFragments = new PaymentsFragment();
         }
 
         public override void OnBackPressed()
@@ -68,17 +80,18 @@ namespace Pyvela
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
-            var fragmentTransacion = SupportFragmentManager.BeginTransaction();
+            var fragmentTransaction = SupportFragmentManager.BeginTransaction();
 
             int id = item.ItemId;
 
             if (id == Resource.Id.nav_main_page)
             {
-
+                
             }
             else if (id == Resource.Id.nav_payment)
             {
-
+                fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, paymentsFragments);
+                fragmentTransaction.SetTransition(4097);
             }
             else if (id == Resource.Id.nav_speciality)
             {
@@ -94,7 +107,8 @@ namespace Pyvela
             }
             else if (id == Resource.Id.nav_results)
             {
-                fragmentTransacion.Replace(Resource.Id.content_main_fragments_placeholder, new NavDraw.Results.ResultsFragment());
+                fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, resultsFragment);
+                fragmentTransaction.SetTransition(4097);
             }
             else if (id == Resource.Id.nav_exit)
             {
@@ -104,10 +118,15 @@ namespace Pyvela
             {
 
             }
-            fragmentTransacion.Commit();
+            fragmentTransaction.Commit();
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             drawer.CloseDrawer(GravityCompat.Start);
             return true;
+        }
+
+        public void ButtonClick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
