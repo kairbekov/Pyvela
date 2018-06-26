@@ -1,8 +1,8 @@
-﻿using Pyvela.NavDraw;
-using Pyvela.NavDraw.Results;
-using Pyvela.NavDraw.Subjects;
-using Pyvela.NavDraw.Payments;
+﻿using Pyvela.Main.Results;
+using Pyvela.Main.Subjects;
+using Pyvela.Main.Payments;
 
+using System.Collections.Generic;
 using Android.App;
 using Android.OS;
 using Android.Support.Design.Widget;
@@ -10,10 +10,9 @@ using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
-using Android.Widget;
 using System;
 
-namespace Pyvela
+namespace Pyvela.Main
 {
     [Activity(Label = "Pyvela", Theme = "@style/AppTheme.NoActionBar", Icon = "@mipmap/icon")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
@@ -39,7 +38,7 @@ namespace Pyvela
             navigationView.SetNavigationItemSelectedListener(this);
 
             var fragmentTransaction = SupportFragmentManager.BeginTransaction();
-            fragmentTransaction.Add(2131230884, new NavDraw.Subjects.SubjectsFragment());
+            fragmentTransaction.Add(2131230884, new Main.Subjects.SubjectsFragment());
             fragmentTransaction.SetTransition(4097);
             fragmentTransaction.Commit();
 
@@ -60,6 +59,9 @@ namespace Pyvela
                 base.OnBackPressed();
             }
         }
+
+
+        
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {

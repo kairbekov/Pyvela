@@ -1,13 +1,12 @@
-﻿using Pyvela.Utils.Adapters;
-using Pyvela.Utils.Containers;
+﻿using Pyvela.Common.Adapters;
+using Pyvela.Common.Containers;
 
 using System.Collections.Generic;
-using Android.App;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
 
-namespace Pyvela.NavDraw.Results
+namespace Pyvela.Main.Results
 {
     public class ResultsFragment : Android.Support.V4.App.Fragment
     {

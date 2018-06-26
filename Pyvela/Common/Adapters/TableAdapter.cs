@@ -1,11 +1,12 @@
-﻿using Pyvela.Utils.Containers;
+﻿using Pyvela.Common.Containers;
 
 using System.Collections.Generic;
+
 using Android.Content;
 using Android.Views;
 using Android.Widget;
 
-namespace Pyvela.Utils.Adapters
+namespace Pyvela.Common.Adapters
 {
         class TableAdapter: ArrayAdapter
         {

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Pyvela.Main.Entrance;
+
 
 using Android.App;
 using Android.Content;
@@ -10,7 +8,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace Pyvela
+namespace Pyvela.Main.Entrance
 {
     [Activity(Label = "AuthorizationActivity")]
     public class AuthorizationActivity : Activity
@@ -32,7 +30,7 @@ namespace Pyvela
 
             SignUpBut.Click += (s, e) =>
             {
-                var intent = new Intent(this, typeof(RegistrationPage));
+                var intent = new Intent(this, typeof(RegistrationActivity));
                 StartActivity(intent);
             };
 

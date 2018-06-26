@@ -1,14 +1,15 @@
-﻿using Android.App;
+﻿using Pyvela.Main.Entrance;
+
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
 
-
-namespace Pyvela
+namespace Pyvela.Main.Entrance
 {
     [Activity(Label = "Pyvela",  Icon = "@mipmap/icon")]
-    class RegistrationPage : Activity   
+    class RegistrationActivity : Activity   
     {
         protected override void OnCreate(Bundle bundle)
         {

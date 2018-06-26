@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Preferences;
-using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Util;
-using Android.Views;
-using Android.Widget;
 
-namespace Pyvela
+namespace Pyvela.Main.Entrance
 {
     [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : AppCompatActivity
@@ -43,7 +35,6 @@ namespace Pyvela
             PrefsEditor.PutString("Name", Name);
             PrefsEditor.PutBoolean("Bool", bl);
             PrefsEditor.Commit();
-            Toast.MakeText(this, SharedPrefs.GetString("Name", "hello"), ToastLength.Short).Show();
         }
 
         // Launches the startup task
@@ -57,7 +48,6 @@ namespace Pyvela
             if (SharedPrefs.GetBoolean("Bool", false) == false)
             {
                 StartActivity(new Intent(Application.Context, typeof(AuthorizationActivity)));
-
             }
             else
                 StartActivity(new Intent(Application.Context, typeof(MainActivity)));

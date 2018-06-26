@@ -2984,35 +2984,11 @@ namespace Pyvela
 			// aapt resource value: 0x7f0800ad
 			public const int status_bar_latest_event_content = 2131230893;
 			
-			// aapt resource value: 0x7f0800d1
-			public const int subject_frag_answer1 = 2131230929;
-			
-			// aapt resource value: 0x7f0800d2
-			public const int subject_frag_answer2 = 2131230930;
-			
 			// aapt resource value: 0x7f0800d3
-			public const int subject_frag_answer3 = 2131230931;
-			
-			// aapt resource value: 0x7f0800d4
-			public const int subject_frag_answer4 = 2131230932;
-			
-			// aapt resource value: 0x7f0800d5
-			public const int subject_frag_answer5 = 2131230933;
-			
-			// aapt resource value: 0x7f0800ce
-			public const int subject_test_exit = 2131230926;
-			
-			// aapt resource value: 0x7f0800d0
-			public const int subject_test_question = 2131230928;
+			public const int subject_test_viewPager = 2131230931;
 			
 			// aapt resource value: 0x7f0800cd
-			public const int subject_test_toolbar = 2131230925;
-			
-			// aapt resource value: 0x7f0800cf
-			public const int subject_test_viewPager = 2131230927;
-			
-			// aapt resource value: 0x7f0800d6
-			public const int subjects_frag_listView = 2131230934;
+			public const int subjects_frag_listView = 2131230925;
 			
 			// aapt resource value: 0x7f080076
 			public const int submenuarrow = 2131230838;
@@ -3026,20 +3002,44 @@ namespace Pyvela
 			// aapt resource value: 0x7f08001f
 			public const int tabMode = 2131230751;
 			
-			// aapt resource value: 0x7f0800d7
-			public const int table_markup_column1 = 2131230935;
+			// aapt resource value: 0x7f0800ce
+			public const int table_markup_column1 = 2131230926;
 			
-			// aapt resource value: 0x7f0800d8
-			public const int table_markup_column2 = 2131230936;
+			// aapt resource value: 0x7f0800cf
+			public const int table_markup_column2 = 2131230927;
 			
-			// aapt resource value: 0x7f0800d9
-			public const int table_markup_column3 = 2131230937;
+			// aapt resource value: 0x7f0800d0
+			public const int table_markup_column3 = 2131230928;
 			
-			// aapt resource value: 0x7f0800da
-			public const int table_markup_column4 = 2131230938;
+			// aapt resource value: 0x7f0800d1
+			public const int table_markup_column4 = 2131230929;
 			
 			// aapt resource value: 0x7f080019
 			public const int tag_transition_group = 2131230745;
+			
+			// aapt resource value: 0x7f0800d6
+			public const int tests_answer1 = 2131230934;
+			
+			// aapt resource value: 0x7f0800d7
+			public const int tests_answer2 = 2131230935;
+			
+			// aapt resource value: 0x7f0800d8
+			public const int tests_answer3 = 2131230936;
+			
+			// aapt resource value: 0x7f0800d9
+			public const int tests_answer4 = 2131230937;
+			
+			// aapt resource value: 0x7f0800da
+			public const int tests_answer5 = 2131230938;
+			
+			// aapt resource value: 0x7f0800d4
+			public const int tests_pos = 2131230932;
+			
+			// aapt resource value: 0x7f0800d5
+			public const int tests_question = 2131230933;
+			
+			// aapt resource value: 0x7f0800d2
+			public const int tests_spinner = 2131230930;
 			
 			// aapt resource value: 0x7f08001a
 			public const int text = 2131230746;
@@ -3386,19 +3386,19 @@ namespace Pyvela
 			public const int select_dialog_singlechoice_material = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int subject_test_act = 2130968643;
+			public const int subjects_frag = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int subject_test_frag = 2130968644;
+			public const int support_simple_spinner_dropdown_item = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int subjects_frag = 2130968645;
+			public const int table_markup = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int support_simple_spinner_dropdown_item = 2130968646;
+			public const int tests_act = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int table_markup = 2130968647;
+			public const int tests_frag = 2130968647;
 			
 			// aapt resource value: 0x7f040048
 			public const int tooltip = 2130968648;
@@ -3613,6 +3613,9 @@ namespace Pyvela
 			
 			// aapt resource value: 0x7f0a015f
 			public const int Animation_Design_BottomSheetDialog = 2131362143;
+			
+			// aapt resource value: 0x7f0a0187
+			public const int AnswerButton = 2131362183;
 			
 			// aapt resource value: 0x7f0a0182
 			public const int AppTheme = 2131362178;

@@ -1,5 +1,5 @@
-﻿using Pyvela.Utils.Adapters;
-using Pyvela.Utils.Containers;
+﻿using Pyvela.Common.Adapters;
+using Pyvela.Common.Containers;
 
 using System.Collections.Generic;
 using Android.App;
@@ -7,7 +7,7 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 
-namespace Pyvela.NavDraw.Payments
+namespace Pyvela.Main.Payments
 {
     public class PaymentsFragment : Android.Support.V4.App.Fragment
     {
