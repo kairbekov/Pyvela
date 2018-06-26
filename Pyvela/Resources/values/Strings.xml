@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="your_string">
+    <u> 1. Mathematic </u>
+  </string>
+  <string name="your_string1">
+    <u> 2. Literacy reading</u>
+  </string>
+  <string name="your_string2">
+    <u> 3. History</u>
+  </string>
     <string name="hello">Hello World, Click Me!</string>
     <string name="app_name">Pyvela</string>
 

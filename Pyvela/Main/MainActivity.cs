@@ -1,8 +1,9 @@
-﻿using Pyvela.Main.Results;
-using Pyvela.Main.Subjects;
-using Pyvela.Main.Payments;
+﻿using Pyvela.NavDraw;
+using Pyvela.NavDraw.Results;
+using Pyvela.NavDraw.Subjects;
+using Pyvela.NavDraw.Payments;
+using Pyvela.NavDraw.Specialities;
 
-using System.Collections.Generic;
 using Android.App;
 using Android.OS;
 using Android.Support.Design.Widget;
@@ -10,9 +11,11 @@ using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
+using Android.Widget;
 using System;
+using Android.Content;
 
-namespace Pyvela.Main
+namespace Pyvela
 {
     [Activity(Label = "Pyvela", Theme = "@style/AppTheme.NoActionBar", Icon = "@mipmap/icon")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
@@ -20,6 +23,7 @@ namespace Pyvela.Main
         SubjectsFragment subjectsFragments;
         ResultsFragment resultsFragment;
         PaymentsFragment paymentsFragments;
+        SettingsFragment settingsFragment;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -38,13 +42,14 @@ namespace Pyvela.Main
             navigationView.SetNavigationItemSelectedListener(this);
 
             var fragmentTransaction = SupportFragmentManager.BeginTransaction();
-            fragmentTransaction.Add(2131230884, new Main.Subjects.SubjectsFragment());
+            fragmentTransaction.Add(2131230884, new NavDraw.Subjects.SubjectsFragment());
             fragmentTransaction.SetTransition(4097);
             fragmentTransaction.Commit();
 
             subjectsFragments = new SubjectsFragment();
             resultsFragment = new ResultsFragment();
             paymentsFragments = new PaymentsFragment();
+            settingsFragment = new SettingsFragment();
         }
 
         public override void OnBackPressed()
@@ -52,6 +57,7 @@ namespace Pyvela.Main
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             if (drawer.IsDrawerOpen(GravityCompat.Start))
             {
+                
                 drawer.CloseDrawer(GravityCompat.Start);
             }
             else
@@ -59,9 +65,6 @@ namespace Pyvela.Main
                 base.OnBackPressed();
             }
         }
-
-
-        
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
@@ -97,11 +100,14 @@ namespace Pyvela.Main
             }
             else if (id == Resource.Id.nav_speciality)
             {
-
+                
+                fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, new SpecialitiesFragment());
+                fragmentTransaction.SetTransition(4097);
             }
             else if (id == Resource.Id.nav_UNT)
             {
-
+                Intent intent = new Intent(this, typeof(SpecializationActivity));
+                StartActivity(intent);
             }
             else if (id == Resource.Id.nav_one_subject)
             {
@@ -114,11 +120,13 @@ namespace Pyvela.Main
             }
             else if (id == Resource.Id.nav_exit)
             {
-
+                Intent intent = new Intent(this, typeof(AuthorizationActivity));
+                
+                StartActivity(intent);
             }
             else if (id == Resource.Id.nav_settings)
             {
-
+                fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, settingsFragment);
             }
             fragmentTransaction.Commit();
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
@@ -126,10 +134,7 @@ namespace Pyvela.Main
             return true;
         }
 
-        public void ButtonClick(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
 
