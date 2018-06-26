@@ -43,7 +43,7 @@ namespace Pyvela
             PrefsEditor.PutString("Name", Name);
             PrefsEditor.PutBoolean("Bool", bl);
             PrefsEditor.Commit();
-            Toast.MakeText(this, SharedPrefs.GetString("Name", "hello"), ToastLength.Short).Show();
+            
         }
 
         // Launches the startup task
@@ -56,7 +56,10 @@ namespace Pyvela
 
             if (SharedPrefs.GetBoolean("Bool", false) == false)
             {
-                StartActivity(new Intent(Application.Context, typeof(AuthorizationActivity)));
+                Intent intent = new Intent(this, typeof(AuthorizationActivity));
+                
+                StartActivity(intent);
+                
 
             }
             else

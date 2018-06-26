@@ -22,8 +22,8 @@ namespace Pyvela.NavDraw.Subjects
         {
             View root =  inflater.Inflate(Resource.Layout.subjects_frag, container, false);
             ListView lv = (ListView)root.FindViewById(Resource.Id.subjects_frag_listView);
-            ImageView image = (ImageView)root.FindViewById(Resource.Id.img_tl_image);
-            TextView title = (TextView)root.FindViewById(Resource.Id.img_tl_title);
+            ImageView image = (ImageView)Activity.FindViewById(Resource.Id.img_tl_image);
+            TextView title = (TextView)Activity.FindViewById(Resource.Id.img_tl_title);
 
             lv.ItemClick += On_ItemClick;
 

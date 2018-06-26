@@ -2,6 +2,7 @@
 using Pyvela.NavDraw.Results;
 using Pyvela.NavDraw.Subjects;
 using Pyvela.NavDraw.Payments;
+using Pyvela.NavDraw.Specialities;
 
 using Android.App;
 using Android.OS;
@@ -12,6 +13,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using System;
+using Android.Content;
 
 namespace Pyvela
 {
@@ -21,6 +23,7 @@ namespace Pyvela
         SubjectsFragment subjectsFragments;
         ResultsFragment resultsFragment;
         PaymentsFragment paymentsFragments;
+        SettingsFragment settingsFragment;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -46,6 +49,7 @@ namespace Pyvela
             subjectsFragments = new SubjectsFragment();
             resultsFragment = new ResultsFragment();
             paymentsFragments = new PaymentsFragment();
+            settingsFragment = new SettingsFragment();
         }
 
         public override void OnBackPressed()
@@ -53,6 +57,7 @@ namespace Pyvela
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             if (drawer.IsDrawerOpen(GravityCompat.Start))
             {
+                
                 drawer.CloseDrawer(GravityCompat.Start);
             }
             else
@@ -95,11 +100,14 @@ namespace Pyvela
             }
             else if (id == Resource.Id.nav_speciality)
             {
-
+                
+                fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, new SpecialitiesFragment());
+                fragmentTransaction.SetTransition(4097);
             }
             else if (id == Resource.Id.nav_UNT)
             {
-
+                Intent intent = new Intent(this, typeof(SpecializationActivity));
+                StartActivity(intent);
             }
             else if (id == Resource.Id.nav_one_subject)
             {
@@ -112,11 +120,13 @@ namespace Pyvela
             }
             else if (id == Resource.Id.nav_exit)
             {
-
+                Intent intent = new Intent(this, typeof(AuthorizationActivity));
+                
+                StartActivity(intent);
             }
             else if (id == Resource.Id.nav_settings)
             {
-
+                fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, settingsFragment);
             }
             fragmentTransaction.Commit();
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
@@ -124,10 +134,7 @@ namespace Pyvela
             return true;
         }
 
-        public void ButtonClick(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
 
