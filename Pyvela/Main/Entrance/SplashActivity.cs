@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Pyvela.Main.Entrance;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -21,7 +17,6 @@ namespace Pyvela
         private ISharedPreferences SharedPrefs;
         private ISharedPreferencesEditor PrefsEditor;
         private Context mContext;
-
 
         static readonly string TAG = "X:" + typeof(SplashActivity).Name;
 
@@ -59,8 +54,6 @@ namespace Pyvela
                 Intent intent = new Intent(this, typeof(AuthorizationActivity));
                 
                 StartActivity(intent);
-                
-
             }
             else
                 StartActivity(new Intent(Application.Context, typeof(MainActivity)));

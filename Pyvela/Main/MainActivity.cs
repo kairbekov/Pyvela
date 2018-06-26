@@ -1,8 +1,8 @@
-﻿using Pyvela.NavDraw;
-using Pyvela.NavDraw.Results;
-using Pyvela.NavDraw.Subjects;
-using Pyvela.NavDraw.Payments;
-using Pyvela.NavDraw.Specialities;
+﻿using Pyvela.Main.Payments;
+using Pyvela.Main.Specialization;
+using Pyvela.Main.Results;
+using Pyvela.Main.Subjects;
+using Pyvela.Main.Entrance;
 
 using Android.App;
 using Android.OS;
@@ -11,7 +11,6 @@ using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
-using Android.Widget;
 using System;
 using Android.Content;
 
@@ -42,7 +41,7 @@ namespace Pyvela
             navigationView.SetNavigationItemSelectedListener(this);
 
             var fragmentTransaction = SupportFragmentManager.BeginTransaction();
-            fragmentTransaction.Add(2131230884, new NavDraw.Subjects.SubjectsFragment());
+            fragmentTransaction.Add(2131230884, new SubjectsFragment());
             fragmentTransaction.SetTransition(4097);
             fragmentTransaction.Commit();
 

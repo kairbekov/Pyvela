@@ -35,7 +35,7 @@ namespace Pyvela.Main.Tests
                     ExercisesCount = 30;
                 viewPager = (ViewPager)FindViewById(Resource.Id.subject_test_viewPager);
                 viewPager.Adapter = new TestsAdapter(SupportFragmentManager, ExercisesCount);
-                TestsData.Add(new List<string>);
+                //TestsData.Add(new List<string>());
                 
                 spinner = (Spinner)FindViewById(Resource.Id.tests_spinner);
                 spinner.Visibility = Android.Views.ViewStates.Invisible;

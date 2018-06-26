@@ -11,7 +11,7 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 
-namespace Pyvela.NavDraw.Specialities
+namespace Pyvela.Main.Specialization
 {
     public class SettingsFragment : Android.Support.V4.App.Fragment
     {

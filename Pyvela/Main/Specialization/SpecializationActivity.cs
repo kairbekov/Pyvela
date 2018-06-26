@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace Pyvela
+namespace Pyvela.Main.Specialization
 {
     [Activity(Label = "SpecializationActivity")]
     public class SpecializationActivity : Activity

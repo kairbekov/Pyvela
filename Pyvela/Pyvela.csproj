@@ -115,32 +115,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BackPressClass.cs" />
-    <Compile Include="DataBase.cs" />
-    <Compile Include="NavDraw\Specialities\SettingsFragment.cs" />
-    <Compile Include="NavDraw\Specialities\SpecialitiesFragment.cs" />
-    <Compile Include="SpecialityActivity.cs" />
-    <Compile Include="SpecializationActivity.cs" />
-    <Compile Include="Utils\Containers\Exercise.cs" />
+    <Compile Include="Args.cs" />
+    <Compile Include="Common\Containers\Exercise.cs" />
     <Compile Include="Data\Local\SingleTest.cs" />
-    <Compile Include="NavDraw\Payments\PaymentsFragment.cs" />
-    <Compile Include="NavDraw\Results\ResultsFragment.cs" />
-    <Compile Include="NavDraw\Subjects\SubjectsFragment.cs" />
-    <Compile Include="NavDraw\Subjects\SubjectTestActivity.cs" />
-    <Compile Include="NavDraw\Subjects\SubjectTestFragment.cs" />
-    <Compile Include="NavDraw\UNT\UntActivity.cs" />
-    <Compile Include="NavDraw\UNT\UntFragment.cs" />
-    <Compile Include="Utils\Adapters\SubjectTestAdapter.cs" />
-    <Compile Include="Utils\Adapters\TableAdapter.cs" />
-    <Compile Include="AuthorizationActivity.cs" />
-    <Compile Include="Utils\Adapters\ImageTitleAdapter.cs" />
-    <Compile Include="MainActivity.cs" />
-    <Compile Include="RegistrationPage.cs" />
+    <Compile Include="Data\Local\TestsData.cs" />
+    <Compile Include="Main\Payments\PaymentsFragment.cs" />
+    <Compile Include="Main\Results\ResultsFragment.cs" />
+    <Compile Include="Main\Specialization\SettingsFragment.cs" />
+    <Compile Include="Main\Specialization\SpecialitiesFragment.cs" />
+    <Compile Include="Main\Specialization\SpecialityActivity.cs" />
+    <Compile Include="Main\Specialization\SpecializationActivity.cs" />
+    <Compile Include="Main\Subjects\SubjectsFragment.cs" />
+    <Compile Include="Main\Tests\TestsAdapter.cs" />
+    <Compile Include="Main\Tests\TestsActivity.cs" />
+    <Compile Include="Main\Tests\TestsFragment.cs" />
+    <Compile Include="Common\Adapters\TableAdapter.cs" />
+    <Compile Include="Main\Entrance\AuthorizationActivity.cs" />
+    <Compile Include="Common\Adapters\ImageTitleAdapter.cs" />
+    <Compile Include="Main\MainActivity.cs" />
+    <Compile Include="Main\Entrance\RegistrationActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\Containers\ImageTitle.cs" />
-    <Compile Include="SplashActivity.cs" />
-    <Compile Include="Utils\Containers\Row.cs" />
+    <Compile Include="Common\Containers\ImageTitle.cs" />
+    <Compile Include="Main\Entrance\SplashActivity.cs" />
+    <Compile Include="Common\Containers\Row.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -273,16 +271,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\subject_test_act.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\subject_test_frag.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\layout_bg_round1.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -296,6 +284,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\specialization_act.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\tests_act.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\tests_frag.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />

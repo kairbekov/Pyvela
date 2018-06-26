@@ -14,10 +14,9 @@ namespace Pyvela.Main.Tests
             get { return SubCount; }
         }
 
-        public TestsAdapter(FragmentManager fragementManager, int ExercisesCount, int order) : base(fragementManager)    
+        public TestsAdapter(FragmentManager fragementManager, int ExercisesCount) : base(fragementManager)    
         {
             this.SubCount = ExercisesCount;
-            this.Order = order;
         }
 
         public override Fragment GetItem(int position)

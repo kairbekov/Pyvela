@@ -6,10 +6,9 @@ namespace Pyvela.Data.Local
     {
         private static List<List<int>> SelectedAnswers = new List<List<int>>();
 
-        private string[] SubjectsTitle = new string[]
-        {
-            
-        }
+        private string[] SubjectsTitle;
+
+        /*
 
         public static void AddSelectedAnswer(int subjecTitle, int answerIndex, int value)
         {
@@ -30,5 +29,6 @@ namespace Pyvela.Data.Local
         {
             
         }
+        */
     }
 }
