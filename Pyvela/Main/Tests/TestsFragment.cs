@@ -11,27 +11,26 @@ namespace Pyvela.Main.Tests
 {
     public class TestsFragment : Android.Support.V4.App.Fragment
     {
-        private int mPos;
-        private TestsActivity Parent;
+        private int CardPos;
         private TextView Question;
         private Button[] Answers;
-
-        public override void OnAttach(Context context)
+        private int SelectdAnswerPos
         {
-            base.OnAttach(context);
-            Parent = (TestsActivity)context;
-        }
-
-        public override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-            mPos = Arguments.GetInt(Args.Tests.QUESTION_POS, 0);
+            get
+            {
+                for (int i = 0; i < Answers.Length; i++)
+                {
+                    if (!Answers[i].Clickable) { return i; }
+                }
+                return -1;
+            }
+            set { }
         }
 
         public static TestsFragment NewInstanse(int pos)
         {
             Bundle bundle = new Bundle();
-            bundle.PutInt(Args.Tests.QUESTION_POS, pos);
+            bundle.PutInt(Args.QUESTION_POS, pos);
             var fragment = new TestsFragment
             {
                 Arguments = bundle
@@ -39,9 +38,24 @@ namespace Pyvela.Main.Tests
             return fragment;
         }
 
+        public override void OnAttach(Context context)
+        {
+            base.OnAttach(context);
+        }
+
+        public override void OnCreate(Bundle savedInstanceState)
+        {
+            CardPos = Arguments.GetInt(Args.QUESTION_POS, 0);
+            base.OnCreate(savedInstanceState);
+        }
+
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            View root =  inflater.Inflate(Resource.Layout.tests_frag, container, false);
+            //Inflate layout
+            View root = inflater.Inflate(Resource.Layout.tests_frag, container, false);
+
+            //Get views from root
+            Question = (TextView)root.FindViewById(Resource.Id.tests_question);
             Answers = new Button[]
             {
                 (Button)root.FindViewById(Resource.Id.tests_answer1),
@@ -51,67 +65,75 @@ namespace Pyvela.Main.Tests
                 (Button)root.FindViewById(Resource.Id.tests_answer5),
             };
 
-            Exercise exercise = SingleTest.Exercises[mPos];
+            //Get exercise from TestsData
+            Exercise CardData = TestsData.Instance.Exercises[CardPos];
 
-            Question = (TextView)root.FindViewById(Resource.Id.tests_question);
-            Question.Text = exercise.Question;
+            //Set data for views
+            Question.Text = CardData.Question;
 
             Button answer;
-            for ( int i = 0; i < Answers.Length; i++)
+            for (int i = 0; i < Answers.Length; i++)
             {
                 answer = Answers[i];
-                answer.Text = exercise.Answer1;
+                answer.Text = CardData.Answer1;
                 answer.Click += OnAnswerClick;
             }
 
-            if (savedInstanceState != null)
-            {
-                int pos = savedInstanceState.GetInt(Args.Tests.SELECTED_ANSWER_POS);
-                Answers[pos].Clickable = false;
-                Answers[pos].SetBackgroundResource(Resource.Drawable.layout_bg_round2);
-            }
+            RestoreAnswersState(TestsData.Instance.CurrentAnswers[CardPos]);
 
             TextView PagePos = (TextView)root.FindViewById(Resource.Id.tests_pos);
-            PagePos.Text = (mPos + 1).ToString();
+            PagePos.Text = (CardPos + 1).ToString();
 
             return root;
         }
 
-
         private void OnAnswerClick(object sender, EventArgs e)
         {
             Button SelectedAnswer = (Button)sender;
-            
+
             if (SelectedAnswer.Clickable)
             {
                 foreach (var answer in Answers)
                 {
                     if (!answer.Clickable)
                         answer.Clickable = true;
-                        answer.SetBackgroundResource(Resource.Drawable.layout_bg_round1);
-                        break;
+                    answer.SetBackgroundResource(Resource.Drawable.layout_bg_round1);
                 }
                 SelectedAnswer.Clickable = false;
                 SelectedAnswer.SetBackgroundResource(Resource.Drawable.layout_bg_round2);
             }
         }
 
-        public override void OnSaveInstanceState(Bundle outState)
+        public override void OnDestroy()
         {
-            outState.PutInt(Args.Tests.SELECTED_ANSWER_POS, GetSelectedButtonPos());
-            base.OnSaveInstanceState(outState);
+            TestsData.Instance.CurrentAnswers[CardPos] = SelectdAnswerPos;
+            FragmentsWatcher.Instance.Remove(this);
+            base.OnDestroy();
         }
 
-        public int GetSelectedButtonPos()
+        public void Update()
         {
-            for (int i = 0; i < Answers.Length; i++)
+            int index = TestsData.Instance.CurrentAnswers[CardPos];
+            RestoreAnswersState(index);
+            Question.Text = "UPDATED";
+        }
+
+        private void RestoreAnswersState(int index)
+        {
+            foreach (Button answer in Answers)
             {
-                if (Answers[i].Clickable)
+                if (!answer.Clickable)
                 {
-                    return i;
+                    answer.Clickable = true;
+                    answer.SetBackgroundResource(Resource.Drawable.layout_bg_round1);
                 }
             }
-            return -1;
+            if (index != -1)
+            {
+                Answers[index].Clickable = false;
+                Answers[index].SetBackgroundResource(Resource.Drawable.layout_bg_round2);
+            }
         }
     }
 }
+    

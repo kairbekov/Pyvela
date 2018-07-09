@@ -1,31 +1,39 @@
 ﻿using Pyvela.Data.Local;
 using Android.OS;
 using Android.Support.V4.App;
+using Android.Views;
+using Java.Lang;
 
 namespace Pyvela.Main.Tests
 {
     public class TestsAdapter : FragmentStatePagerAdapter
     {
-        private int SubCount { get; set; }
-        private int Order;
+        public int SubCount { get; set; }
+        public TestsActivity Parent { get; set; }
 
         public override int Count
         {
             get { return SubCount; }
         }
 
-        public TestsAdapter(FragmentManager fragementManager, int ExercisesCount) : base(fragementManager)    
+        public TestsAdapter(FragmentManager fragementManager, int subCount, TestsActivity Parent) : base(fragementManager)    
         {
-            this.SubCount = ExercisesCount;
+            this.SubCount = subCount;
+            this.Parent = Parent;
         }
 
         public override Fragment GetItem(int position)
         {
-            return TestsFragment.NewInstanse(position);
+            var fragment = TestsFragment.NewInstanse(position);
+            FragmentsWatcher.Instance.Add(fragment);
+            return fragment;
         }
-        public override IParcelable SaveState()
+        public void Update()
         {
-            return base.SaveState();
+            foreach (TestsFragment fragment in FragmentsWatcher.Instance.Get())
+            {
+                fragment.Update();
+            }
         }
     }
 }

@@ -2,27 +2,18 @@
 using Pyvela.Main.Specialization;
 using Pyvela.Main.Results;
 using Pyvela.Main.Subjects;
-using Pyvela.Main.Entrance;
-
+using Pyvela.Main;
 using Android.App;
 using Android.OS;
 using Android.Support.Design.Widget;
-using Android.Support.V4.View;
-using Android.Support.V4.Widget;
 using Android.Support.V7.App;
-using Android.Views;
-using System;
-using Android.Content;
 
 namespace Pyvela
 {
     [Activity(Label = "Pyvela", Theme = "@style/AppTheme.NoActionBar", Icon = "@mipmap/icon")]
-    public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
+    public class MainActivity : AppCompatActivity
     {
-        SubjectsFragment subjectsFragments;
-        ResultsFragment resultsFragment;
-        PaymentsFragment paymentsFragments;
-        SettingsFragment settingsFragment;
+        BottomNavigationView navigation;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -32,108 +23,39 @@ namespace Pyvela
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
-            drawer.AddDrawerListener(toggle);
-            toggle.SyncState();
-
-            NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
-            navigationView.SetNavigationItemSelectedListener(this);
+            navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
+            navigation.NavigationItemSelected += Navigation_NavigationItemSelected;
+            navigation.SelectedItemId = Resource.Id.nav_home;
 
             var fragmentTransaction = SupportFragmentManager.BeginTransaction();
-            fragmentTransaction.Add(2131230884, new SubjectsFragment());
+            fragmentTransaction.Add(Resource.Id.main_content_fragments_placeholder, new HomeFragment());
             fragmentTransaction.SetTransition(4097);
             fragmentTransaction.Commit();
-
-            subjectsFragments = new SubjectsFragment();
-            resultsFragment = new ResultsFragment();
-            paymentsFragments = new PaymentsFragment();
-            settingsFragment = new SettingsFragment();
         }
 
-        public override void OnBackPressed()
+        private void Navigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
         {
-            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            if (drawer.IsDrawerOpen(GravityCompat.Start))
-            {
-                
-                drawer.CloseDrawer(GravityCompat.Start);
-            }
-            else
-            {
-                base.OnBackPressed();
-            }
-        }
 
-        public override bool OnCreateOptionsMenu(IMenu menu)
-        {
-            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
-            return true;
-        }
-
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            int id = item.ItemId;
-            if (id == Resource.Id.action_settings)
+            if (navigation.SelectedItemId == e.Item.ItemId)
             {
-                return true;
+                return;
             }
 
-            return base.OnOptionsItemSelected(item);
-        }
-
-        public bool OnNavigationItemSelected(IMenuItem item)
-        {
             var fragmentTransaction = SupportFragmentManager.BeginTransaction();
-
-            int id = item.ItemId;
-
-            if (id == Resource.Id.nav_main_page)
+            switch (e.Item.ItemId)
             {
-                
+                case Resource.Id.nav_profile:
+                    fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, new ProfileFragment());
+                    break;
+                case Resource.Id.nav_home:
+                    fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, new HomeFragment());
+                    break;
+                case Resource.Id.nav_settings:
+                    break;
             }
-            else if (id == Resource.Id.nav_payment)
-            {
-                fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, paymentsFragments);
-                fragmentTransaction.SetTransition(4097);
-            }
-            else if (id == Resource.Id.nav_speciality)
-            {
-                
-                fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, new SpecialitiesFragment());
-                fragmentTransaction.SetTransition(4097);
-            }
-            else if (id == Resource.Id.nav_UNT)
-            {
-                Intent intent = new Intent(this, typeof(SpecializationActivity));
-                StartActivity(intent);
-            }
-            else if (id == Resource.Id.nav_one_subject)
-            {
-
-            }
-            else if (id == Resource.Id.nav_results)
-            {
-                fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, resultsFragment);
-                fragmentTransaction.SetTransition(4097);
-            }
-            else if (id == Resource.Id.nav_exit)
-            {
-                Intent intent = new Intent(this, typeof(AuthorizationActivity));
-                
-                StartActivity(intent);
-            }
-            else if (id == Resource.Id.nav_settings)
-            {
-                fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, settingsFragment);
-            }
+            fragmentTransaction.SetTransition(4097);
             fragmentTransaction.Commit();
-            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            drawer.CloseDrawer(GravityCompat.Start);
-            return true;
         }
-
-        
     }
 }
 

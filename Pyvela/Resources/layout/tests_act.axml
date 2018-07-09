@@ -3,29 +3,25 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!--
-    <RelativeLayout
-        android:id="@+id/tests_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_height"
-        android:minHeight="@dimen/toolbar_height"
-        android:background="@color/gray"
-        android:gravity="center_vertical">
-        <Button
-            android:text="Exit"
-            android:textSize="15dp"
-            android:id="@+id/tests_exit"
-            android:layout_height="40dp"
-            android:layout_width="70dp"
-            android:gravity="center"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp" />
-    </RelativeLayout>
-    -->
     <Spinner
+        android:layout_margin="20dp"
         android:id="@+id/tests_spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="30dp"
+        android:background="@drawable/layout_bg_round1" />
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+        <TextView
+            android:textSize="5sp"
+            android:id="@+id/tests_infromer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:scrollbars="vertical" />
+    </ScrollView>
     <android.support.v4.view.ViewPager
         android:id="@+id/subject_test_viewPager"
         android:layout_width="match_parent"

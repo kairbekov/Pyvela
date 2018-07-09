@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Pyvela.Common.Containers
 {
-    class Exercise
+    public class Exercise
     {
         public string Question { get;}
         public string Answer1 { get; }

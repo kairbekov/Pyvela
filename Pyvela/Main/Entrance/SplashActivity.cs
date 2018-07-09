@@ -47,7 +47,7 @@ namespace Pyvela
             base.OnResume();
 
             AppPreferences(this);
-            SaveAccessKey("Nurlan", false);
+            SaveAccessKey("Nurlan", true);
 
             if (SharedPrefs.GetBoolean("Bool", false) == false)
             {

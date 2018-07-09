@@ -11,9 +11,9 @@ namespace Pyvela.Common.Adapters
     {
         private LayoutInflater Inflater { get; set; }
         private int Layout { get; set; } //Only ImageTitleMarkup
-        private List<ImageTitle> Subjects { get; set; }
+        private ImageTitle[] Subjects { get; set; }
 
-        public ImageTitleAdapter(Context context, int Resourse, List<ImageTitle> Subjects) : base(context, Resourse, Subjects)
+        public ImageTitleAdapter(Context context, int Resourse, ImageTitle[] Subjects) : base(context, Resourse, Subjects)
         {
             this.Inflater = LayoutInflater.From(context);
             this.Layout = Resourse;
@@ -33,5 +33,6 @@ namespace Pyvela.Common.Adapters
 
             return view;
         }
+
     }
 }
