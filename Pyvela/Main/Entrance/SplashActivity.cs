@@ -3,7 +3,6 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Preferences;
-using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Util;
 using Android.Views;
@@ -45,18 +44,19 @@ namespace Pyvela
         protected override void OnResume()
         {
             base.OnResume();
-
+            /*
             AppPreferences(this);
             SaveAccessKey("Nurlan", true);
 
-            if (SharedPrefs.GetBoolean("Bool", false) == false)
+            if (SharedPrefs.GetBoolean("Bool", false) == true)
             {
-                Intent intent = new Intent(this, typeof(AuthorizationActivity));
-                
+                Intent intent = new Intent(this, typeof(EntranceActivity));
                 StartActivity(intent);
             }
             else
                 StartActivity(new Intent(Application.Context, typeof(MainActivity)));
+            */
+            StartActivity(new Intent(Application.Context, typeof(EntranceActivity)));
         }
     }
 }

@@ -15,16 +15,39 @@ namespace Pyvela.Main
 {
     public class ProfileFragment : Android.Support.V4.App.Fragment
     {
+        private ImageView imageView;
+        private TextView textView;
+        private MainActivity Parent;
+        private Button button;
+
+        public override void OnAttach(Context context)
+        {
+            Console.WriteLine("On Attach");
+            this.Parent = (MainActivity)context;
+            base.OnAttach(context);
+        }
+
         public override void OnCreate(Bundle savedInstanceState)
         {
+            Console.WriteLine("On Create View");
             base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            return inflater.Inflate(Resource.Layout.profile_frag, container, false);
+            Console.WriteLine("On Create View");
+            View root = inflater.Inflate(Resource.Layout.profile_frag, container, false);
+
+            imageView = root.FindViewById<ImageView>(Resource.Id.profile_image);
+            button = root.FindViewById<Button>(Resource.Id.profile_button);
+            button.Click += Button_Click;
+            return root;
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            button.Text = "LOL KEK";
+            imageView.SetImageResource(Resource.Drawable.a);
         }
     }
 }

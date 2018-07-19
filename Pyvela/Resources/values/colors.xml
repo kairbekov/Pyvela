@@ -9,5 +9,24 @@
   <color name="silver">#C0C0C0</color>
   <color name="gray">#808080</color>
   <color name="black">#000000</color>
-  
+
+  <!--Authorization -->
+
+  <color name="colorAuthPrimary">#0E4F8A</color>
+  <color name="colorAuthAccent">#FFFFFF</color>
+
+  <color name="colorAuthBackground">@color/colorAuthPrimary</color>
+  <color name="colorAuthTextEditHint">#91A2BE</color>
+  <color name="colorAuthSignUpText">#2FEFEF</color>
+  <color name="colorAuthForgotPassword">@color/colorAuthSignUpText</color>
+
+  <color name="authContrast">#FFFFFF</color>
+
+
+  <color name="colorAuthEditTextText">@color/colorAuthAccent</color>
+  <color name="colorAuthEditTextBackground">#15538C</color>
+  <color name="colorAuthSignInBackground">@color/authContrast</color>
+  <color name="colorAuthSignInForeground">@color/colorAuthBackground</color>
+
+
 </resources>
