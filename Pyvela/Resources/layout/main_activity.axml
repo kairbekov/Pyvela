@@ -9,7 +9,8 @@
         layout="@layout/main_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true" />
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_alignParentBottom="true"

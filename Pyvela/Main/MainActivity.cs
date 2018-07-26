@@ -1,5 +1,4 @@
 ﻿using Pyvela.Main.Payments;
-using Pyvela.Main.Specialization;
 using Pyvela.Main.Results;
 using Pyvela.Main.Subjects;
 using Pyvela.Main;
@@ -7,6 +6,8 @@ using Android.App;
 using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
+using Android.Content;
+using Android.Preferences;
 
 namespace Pyvela
 {
@@ -14,7 +15,6 @@ namespace Pyvela
     public class MainActivity : AppCompatActivity
     {
         BottomNavigationView navigation;
-
         ProfileFragment profileFragment;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -30,14 +30,12 @@ namespace Pyvela
             fragmentTransaction.Add(Resource.Id.main_content_fragments_placeholder, new HomeFragment());
             fragmentTransaction.SetTransition(4097);
             fragmentTransaction.Commit();
-            profileFragment = new ProfileFragment();
-            SetContentView(Resource.Layout.main_activity);
 
+            profileFragment = new ProfileFragment();
         }
 
         private void Navigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
         {
-
             if (navigation.SelectedItemId == e.Item.ItemId)
             {
                 return;
@@ -47,12 +45,13 @@ namespace Pyvela
             switch (e.Item.ItemId)
             {
                 case Resource.Id.nav_profile:
-                    fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, profileFragment);
+                    fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, new ProfileFragment());
                     break;
                 case Resource.Id.nav_home:
                     fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, new HomeFragment());
                     break;
                 case Resource.Id.nav_settings:
+                    fragmentTransaction.Replace(Resource.Id.main_content_fragments_placeholder, new SettingsFragment());
                     break;
             }
             fragmentTransaction.Commit();

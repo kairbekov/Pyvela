@@ -46,10 +46,13 @@
     <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.5.1\lib\netstandard1.0\Google.Protobuf.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.8.0.11\lib\netstandard2.0\MySql.Data.dll</HintPath>
+    <Reference Include="MySqlConnector, Version=0.26.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlConnector.0.26.4\lib\netstandard2.0\MySqlConnector.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Configuration.ConfigurationManager.4.4.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
@@ -64,6 +67,9 @@
     </Reference>
     <Reference Include="System.Security.Principal.Windows, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Principal.Windows.4.4.0\lib\netstandard2.0\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -123,21 +129,23 @@
   <ItemGroup>
     <Compile Include="Args.cs" />
     <Compile Include="Common\Adapters\GridViewAdapter.cs" />
+    <Compile Include="Common\Adapters\ImageChangeAdapter.cs" />
     <Compile Include="Common\Containers\Exercise.cs" />
+    <Compile Include="Data\Local\ImageChangeData.cs" />
     <Compile Include="Data\Local\NavViewData.cs" />
     <Compile Include="Data\Local\SubjectsData.cs" />
     <Compile Include="Data\Local\TestsData.cs" />
+    <Compile Include="Data\Remote\DataBaseClass.cs" />
+    <Compile Include="Main\ChooseSubjectsFragment.cs" />
     <Compile Include="Main\Entrance\AuthorizationFragmentcs.cs" />
     <Compile Include="Main\Entrance\EntranceActivity.cs" />
     <Compile Include="Main\Entrance\RegistrationFragment.cs" />
     <Compile Include="Main\HomeFragment.cs" />
+    <Compile Include="Main\ImageChangeFragment.cs" />
     <Compile Include="Main\Payments\PaymentsFragment.cs" />
     <Compile Include="Main\ProfileFragment.cs" />
     <Compile Include="Main\Results\ResultsFragment.cs" />
-    <Compile Include="Main\Specialization\SettingsFragment.cs" />
-    <Compile Include="Main\Specialization\SpecialitiesFragment.cs" />
-    <Compile Include="Main\Specialization\SpecialityActivity.cs" />
-    <Compile Include="Main\Specialization\SpecializationActivity.cs" />
+    <Compile Include="Main\SettingsFragment.cs" />
     <Compile Include="Main\Subjects\SubjectsFragment.cs" />
     <Compile Include="Main\Tests\FragmentsWatcher.cs" />
     <Compile Include="Main\Tests\TestsAdapter.cs" />
@@ -278,9 +286,6 @@
     <AndroidResource Include="Resources\layout\spinner_markup.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\setting_frag1.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\specialization_act.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -331,11 +336,6 @@
     <AndroidResource Include="Resources\drawable\profile_img_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\dummy_layout.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\auth_frag.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -362,6 +362,39 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\pyvela_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\settings_frag.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\apotheosis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\morning_in_a_Pine_Forest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\the_Ninth_Wave.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\serow_Girl_with_Peaches.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\the_Last_Day_of_Pompeii.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\image_change_frag.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\choose_subjects_frag.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icons7.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />

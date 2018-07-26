@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1">
+    <TextView
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:text="1.Mathematical"
+        p1:layout_width="wrap_content"
+        p1:layout_height="30dp"
+        p1:id="@+id/textView1"
+        p1:background="@android:color/darker_gray"
+        p1:layout_marginTop="130.5dp"
+        p1:layout_marginLeft="65.0dp"
+        p1:layout_marginRight="75.5dp" />
+    <TextView
+        p1:text="2.Literacy reading"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="250.0dp"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/textView1"
+        p1:id="@+id/textView2"
+        p1:layout_marginLeft="65dp"
+        p1:layout_marginRight="75.5dp"
+        p1:background="@android:color/darker_gray"
+        p1:layout_marginTop="4.0dp" />
+    <TextView
+        p1:text="3.History Kazakhstan"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="250.5dp"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/textView2"
+        p1:background="@android:color/darker_gray"
+        p1:id="@+id/textView3"
+        p1:layout_marginLeft="65dp"
+        p1:layout_marginRight="75.5dp"
+        p1:layout_marginTop="4.0dp" />
+    <TextView
+        p1:text="4.Select an item 1 "
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/textView3"
+        p1:id="@+id/textView4"
+        p1:background="@android:color/darker_gray"
+        p1:layout_marginLeft="65.0dp"
+        p1:layout_marginTop="4.0dp" />
+    <TextView
+        p1:text="5.Select an item 2"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/textView4"
+        p1:background="@android:color/darker_gray"
+        p1:layout_marginLeft="65.0dp"
+        p1:id="@+id/textView5"
+        p1:layout_marginTop="4.0dp" />
+    <Button
+        p1:text="Start"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/textView5"
+        p1:id="@+id/button1"
+        p1:layout_marginLeft="65.0dp"
+        p1:layout_marginTop="5.0dp" />
+    <ImageView
+        p1:src="@android:drawable/ic_menu_gallery"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/textView3"
+        p1:id="@+id/imageView1"
+        p1:layout_marginLeft="250.5dp" />
+</RelativeLayout>

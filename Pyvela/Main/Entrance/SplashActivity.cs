@@ -37,16 +37,13 @@ namespace Pyvela
             PrefsEditor.PutString("Name", Name);
             PrefsEditor.PutBoolean("Bool", bl);
             PrefsEditor.Commit();
-            
         }
 
         // Launches the startup task
         protected override void OnResume()
         {
             base.OnResume();
-            /*
             AppPreferences(this);
-            SaveAccessKey("Nurlan", true);
 
             if (SharedPrefs.GetBoolean("Bool", false) == true)
             {
@@ -55,8 +52,6 @@ namespace Pyvela
             }
             else
                 StartActivity(new Intent(Application.Context, typeof(MainActivity)));
-            */
-            StartActivity(new Intent(Application.Context, typeof(EntranceActivity)));
         }
     }
 }
